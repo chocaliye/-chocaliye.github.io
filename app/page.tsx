@@ -211,9 +211,7 @@ export default function Home() {
   const reduceMotion = useReducedMotion();
   const { scrollY } = useScroll();
   const titleYTarget = useTransform(scrollY, [0, 900], [0, -16], { clamp: true });
-  const photoYTarget = useTransform(scrollY, [0, 900], [0, 30], { clamp: true });
   const titleY = useSpring(titleYTarget, { stiffness: 150, damping: 28, mass: 0.38 });
-  const photoY = useSpring(photoYTarget, { stiffness: 135, damping: 30, mass: 0.42 });
 
   useEffect(() => {
     document.documentElement.lang = locale === "pt" ? "pt-BR" : "en";
@@ -303,26 +301,25 @@ export default function Home() {
 
       <ScrollIndicator sections={scrollSections} />
 
-      <section className="hero shell">
-        <div className="heroStatement">
-          <p className="eyebrow hero-enter hero-enter-1">{t.hero.eyebrow}</p>
-          <motion.div className="heroTitleMotion" style={{ y: reduceMotion ? 0 : titleY }}>
-            <h1 className="hero-enter hero-enter-2">
-              {t.hero.title}
-              <span>{t.hero.titleAccent}</span>
-            </h1>
-          </motion.div>
-          <div className="heroBottom hero-enter hero-enter-3">
-            <p>{t.hero.body}</p>
-            <a href="#work"><WeightShiftText>{t.hero.cta}</WeightShiftText></a>
-          </div>
-        </div>
+      <section className="hero">
+        <div className="heroBackdrop" aria-hidden="true" />
 
-        <div className="heroVisual hero-enter hero-enter-photo">
-          <motion.div className="heroPhotoMotion" style={{ y: reduceMotion ? 0 : photoY }}>
-            <img src="/david-hero-chair.webp" alt="David Chocaliye com um laptop" />
-          </motion.div>
-          <div className="heroCaption">
+        <div className="shell heroInner">
+          <div className="heroStatement">
+            <p className="eyebrow hero-enter hero-enter-1">{t.hero.eyebrow}</p>
+            <motion.div className="heroTitleMotion" style={{ y: reduceMotion ? 0 : titleY }}>
+              <h1 className="hero-enter hero-enter-2">
+                {t.hero.title}
+                <span>{t.hero.titleAccent}</span>
+              </h1>
+            </motion.div>
+            <div className="heroBottom hero-enter hero-enter-3">
+              <p>{t.hero.body}</p>
+              <a href="#work"><WeightShiftText>{t.hero.cta}</WeightShiftText></a>
+            </div>
+          </div>
+
+          <div className="heroMeta hero-enter hero-enter-3" aria-label="Identificação">
             <span>David Chocaliye</span>
             <span>{t.hero.location}</span>
           </div>
