@@ -134,8 +134,8 @@ const projects = {
   pt: [
     {
       label: "01 / KLASSE",
-      title: "Gestão escolar construída para a realidade das escolas angolanas.",
-      text: "SaaS escolar multi-tenant para matrícula, finanças e operação acadêmica.",
+      title: "Gestão escolar para Angola.",
+      text: "Plataforma escolar multi-tenant para matrícula, finanças, operação acadêmica, consultas com IA e isolamento seguro entre instituições.",
       problem: "Processos acadêmicos e financeiros dispersos entre papel, WhatsApp e rotinas manuais, com pouca visibilidade operacional.",
       build: "Matrícula, propinas, notas, portais por perfil e consultas operacionais com IA dentro de uma única plataforma.",
       architecture: "Multi-tenant · Supabase Auth · PostgreSQL · RLS por escola · Next.js · Vercel",
@@ -158,8 +158,8 @@ const projects = {
   en: [
     {
       label: "01 / KLASSE",
-      title: "School management built for the reality of Angolan schools.",
-      text: "Multi-tenant school SaaS for enrollment, finance and academic operations.",
+      title: "School management for Angola.",
+      text: "A multi-tenant school platform for enrollment, finance, academic operations, AI-assisted queries and secure tenant isolation.",
       problem: "Academic and financial workflows spread across paper, WhatsApp and manual routines, with limited operational visibility.",
       build: "Enrollment, tuition, grades, role-based portals and AI-assisted operational queries inside one platform.",
       architecture: "Multi-tenant · Supabase Auth · PostgreSQL · school-level RLS · Next.js · Vercel",
