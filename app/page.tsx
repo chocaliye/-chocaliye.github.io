@@ -11,11 +11,11 @@ const copy = {
   pt: {
     nav: { work: "Projetos", expertise: "Meu arsenal", about: "Sobre", contact: "Contato" },
     hero: {
-      eyebrow: "Desenvolvedor Full Stack · Product Engineer",
-      title: "Construo software para",
-      titleAccent: " operação real.",
-      body: "SaaS, sistemas multi-tenant, infraestrutura e produtos com IA — pensados para funcionar no dia a dia, não apenas numa demonstração.",
-      cta: "Ver projetos",
+      eyebrow: "ENGENHARIA DE SOFTWARE",
+      title: "David Chocaliye",
+      role: "Desenvolvedor Full Stack · Product Engineer",
+      body: "SaaS · IA · Sistemas multi-tenant · Infraestrutura",
+      cta: "VER MAIS",
       location: "Produto · Engenharia · Software",
     },
     manifesto: {
@@ -56,11 +56,11 @@ const copy = {
   en: {
     nav: { work: "Work", expertise: "My toolkit", about: "About", contact: "Contact" },
     hero: {
-      eyebrow: "Full Stack Developer · Product Engineer",
-      title: "I build software for",
-      titleAccent: " real operations.",
-      body: "SaaS, multi-tenant systems, infrastructure and AI products — designed to work in day-to-day operations, not just in a demo.",
-      cta: "Explore selected work",
+      eyebrow: "SOFTWARE ENGINEERING",
+      title: "David Chocaliye",
+      role: "Full Stack Developer · Product Engineer",
+      body: "SaaS · AI · Multi-tenant systems · Infrastructure",
+      cta: "SEE MORE",
       location: "Product · Engineering · Software",
     },
     manifesto: {
@@ -200,6 +200,7 @@ const skills = {
 
 export default function Home() {
   const [locale, setLocale] = useState<Locale>("pt");
+  const [menuOpen, setMenuOpen] = useState(false);
   const t = copy[locale];
   const scrollSections = [
     { id: "work", label: t.nav.work },
@@ -267,7 +268,7 @@ export default function Home() {
   return (
     <main>
       <header className="topbar shell">
-        <a className="brand" href="#">DC.</a>
+        <a className="brand" href="#" aria-label="David Chocaliye">DC</a>
 
         <div className="topbarRight">
           <nav className="navlinks">
@@ -296,8 +297,28 @@ export default function Home() {
               EN
             </button>
           </div>
+
+          <button
+            className={`menuButton ${menuOpen ? "is-open" : ""}`}
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(open => !open)}
+          >
+            <span />
+            <span />
+          </button>
         </div>
       </header>
+
+      <div className={`mobileMenu ${menuOpen ? "is-open" : ""}`} aria-hidden={!menuOpen}>
+        <nav>
+          <a href="#work" onClick={() => setMenuOpen(false)}>{t.nav.work}</a>
+          <a href="#expertise" onClick={() => setMenuOpen(false)}>{t.nav.expertise}</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>{t.nav.about}</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>{t.nav.contact}</a>
+        </nav>
+      </div>
 
       <ScrollIndicator sections={scrollSections} />
 
@@ -307,21 +328,30 @@ export default function Home() {
         <div className="shell heroInner">
           <div className="heroStatement">
             <p className="eyebrow hero-enter hero-enter-1">{t.hero.eyebrow}</p>
-            <motion.div className="heroTitleMotion" style={{ y: reduceMotion ? 0 : titleY }}>
-              <h1 className="hero-enter hero-enter-2">
-                {t.hero.title}
-                <span>{t.hero.titleAccent}</span>
-              </h1>
-            </motion.div>
-            <div className="heroBottom hero-enter hero-enter-3">
-              <p>{t.hero.body}</p>
-              <a href="#work"><WeightShiftText>{t.hero.cta}</WeightShiftText></a>
-            </div>
-          </div>
 
-          <div className="heroMeta hero-enter hero-enter-3" aria-label="Identificação">
-            <span>David Chocaliye</span>
-            <span>{t.hero.location}</span>
+            <motion.div className="heroTitleMotion" style={{ y: reduceMotion ? 0 : titleY }}>
+              <h1 className="hero-enter hero-enter-2">{t.hero.title}</h1>
+            </motion.div>
+
+            <div className="heroIdentity hero-enter hero-enter-3">
+              <p className="heroRole">{t.hero.role}</p>
+              <p className="heroSpecialties">{t.hero.body}</p>
+            </div>
+
+            <div className="heroActions hero-enter hero-enter-3">
+              <a className="heroPrimaryAction" href="#work">
+                <WeightShiftText>{t.hero.cta}</WeightShiftText>
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a
+                className="heroSocial"
+                href="https://www.linkedin.com/in/david-chocaliye-214429210"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </section>
