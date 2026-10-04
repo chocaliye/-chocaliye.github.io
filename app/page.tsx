@@ -135,7 +135,7 @@ const projects = {
     {
       label: "01 / KLASSE",
       title: "Gestão escolar construída para a realidade das escolas angolanas.",
-      text: "Plataforma escolar multi-tenant para matrícula, finanças, operação acadêmica, consultas com IA e isolamento seguro entre instituições.",
+      text: "SaaS escolar multi-tenant para matrícula, finanças e operação acadêmica.",
       problem: "Processos acadêmicos e financeiros dispersos entre papel, WhatsApp e rotinas manuais, com pouca visibilidade operacional.",
       build: "Matrícula, propinas, notas, portais por perfil e consultas operacionais com IA dentro de uma única plataforma.",
       architecture: "Multi-tenant · Supabase Auth · PostgreSQL · RLS por escola · Next.js · Vercel",
@@ -159,7 +159,7 @@ const projects = {
     {
       label: "01 / KLASSE",
       title: "School management built for the reality of Angolan schools.",
-      text: "A multi-tenant school platform for enrollment, finance, academic operations, AI-assisted queries and secure tenant isolation.",
+      text: "Multi-tenant school SaaS for enrollment, finance and academic operations.",
       problem: "Academic and financial workflows spread across paper, WhatsApp and manual routines, with limited operational visibility.",
       build: "Enrollment, tuition, grades, role-based portals and AI-assisted operational queries inside one platform.",
       architecture: "Multi-tenant · Supabase Auth · PostgreSQL · school-level RLS · Next.js · Vercel",
@@ -188,7 +188,7 @@ const trajectory = {
         period: "2025 — atual",
         role: "Founder & Tech Lead",
         company: "KLASSE",
-        detail: "Liderança técnica e desenvolvimento de um SaaS escolar multi-tenant, da arquitetura e dados ao deploy em produção.",
+        detail: "Liderança técnica e desenvolvimento full stack de um SaaS escolar multi-tenant, cobrindo arquitetura, autenticação e RLS, dados, APIs, IA, jobs assíncronos, segurança, deploy e operação em produção.",
       },
       {
         period: "2026 — atual",
@@ -233,7 +233,7 @@ const trajectory = {
         period: "2025 — present",
         role: "Founder & Tech Lead",
         company: "KLASSE",
-        detail: "Technical leadership and development of a multi-tenant school SaaS, from architecture and data to production deployment.",
+        detail: "Technical leadership and full-stack development of a multi-tenant school SaaS, covering architecture, authentication and RLS, data, APIs, AI, asynchronous jobs, security, deployment and production operations.",
       },
       {
         period: "2026 — present",
