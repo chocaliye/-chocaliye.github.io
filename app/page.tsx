@@ -40,10 +40,18 @@ const copy = {
     },
     about: {
       eyebrow: "Sobre",
-      title: "Gosto de construir perto do problema.",
-      big: "Não separo produto, infraestrutura e operação quando estou construindo software.",
-      p1: "Minha experiência em desenvolvimento e infraestrutura corporativa me levou a olhar cedo para autenticação, dados, deploy, observabilidade e manutenção — não como acabamento, mas como parte do produto.",
-      p2: "Também participo das decisões de interface e de como o produto chega ao mercado. Para mim, construir termina quando a solução consegue ser entendida, usada e mantida.",
+      title: "Um pouco sobre mim",
+      intro: "Sou desenvolvedor Full Stack e Product Engineer. Trabalho entre produto, engenharia e infraestrutura, construindo software para operação real.",
+      profileTitle: "PERFIL",
+      profile: "Minha experiência cruza desenvolvimento de aplicações, sistemas corporativos e infraestrutura. Por isso, autenticação, dados, segurança, deploy, observabilidade e manutenção entram no produto desde o início.",
+      dailyTitle: "NO DIA A DIA",
+      daily: "Transformo problemas operacionais em produto: desenho fluxos, modelo dados, integro APIs e IA, implemento interfaces e acompanho o sistema até produção.",
+      practiceLabel: "Atuação",
+      practice: "Full Stack · Product Engineering · IA · Infraestrutura",
+      locationLabel: "Localização",
+      location: "São Paulo, Brasil",
+      emailLabel: "Email",
+      email: "katanhaboutjob@gmail.com",
     },
     contact: {
       eyebrow: "Contato",
@@ -85,10 +93,18 @@ const copy = {
     },
     about: {
       eyebrow: "About",
-      title: "I like building close to the problem.",
-      big: "I do not separate product, infrastructure and operations when building software.",
-      p1: "My background in development and corporate infrastructure pushed me to think early about authentication, data, deployment, observability and maintenance — not as finishing work, but as part of the product.",
-      p2: "I also take part in interface decisions and how a product reaches the market. For me, the build is complete when the solution can be understood, used and maintained.",
+      title: "A little about me",
+      intro: "I am a Full Stack Developer and Product Engineer. I work across product, engineering and infrastructure, building software for real operations.",
+      profileTitle: "PROFILE",
+      profile: "My background spans application development, corporate systems and infrastructure. That is why authentication, data, security, deployment, observability and maintenance are part of the product from the start.",
+      dailyTitle: "DAY TO DAY",
+      daily: "I turn operational problems into products: I design flows, model data, integrate APIs and AI, build interfaces and follow systems all the way to production.",
+      practiceLabel: "Focus",
+      practice: "Full Stack · Product Engineering · AI · Infrastructure",
+      locationLabel: "Location",
+      location: "São Paulo, Brazil",
+      emailLabel: "Email",
+      email: "katanhaboutjob@gmail.com",
     },
     contact: {
       eyebrow: "Get in touch",
@@ -362,17 +378,51 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="aboutEditorial">
-        <div className="shell aboutGrid">
-          <div className="aboutSticky reveal reveal-left" data-reveal>
+      <section id="about" className="aboutProfile">
+        <div className="shell">
+          <header className="aboutHeading reveal reveal-up" data-reveal>
             <p className="eyebrow">{t.about.eyebrow}</p>
             <h2 data-scroll-title>{t.about.title}</h2>
+          </header>
+
+          <div className="aboutIntro reveal reveal-up" data-reveal>
+            <div className="aboutPortraitFrame">
+              <img
+                className="aboutPortrait"
+                src="/david-hero-chair.webp"
+                alt="David Chocaliye"
+              />
+            </div>
+            <p>{t.about.intro}</p>
           </div>
 
-          <div className="aboutFlow reveal reveal-right" data-reveal>
-            <p className="aboutBig">{t.about.big}</p>
-            <p>{t.about.p1}</p>
-            <p>{t.about.p2}</p>
+          <div className="aboutColumns">
+            <article className="aboutBlock reveal reveal-left" data-reveal>
+              <h3>{t.about.profileTitle}</h3>
+              <p>{t.about.profile}</p>
+
+              <dl className="aboutFacts">
+                <div>
+                  <dt>{t.about.practiceLabel}</dt>
+                  <dd>{t.about.practice}</dd>
+                </div>
+                <div>
+                  <dt>{t.about.locationLabel}</dt>
+                  <dd>{t.about.location}</dd>
+                </div>
+                <div>
+                  <dt>{t.about.emailLabel}</dt>
+                  <dd>
+                    <a href={`mailto:${t.about.email}`}>{t.about.email}</a>
+                  </dd>
+                </div>
+              </dl>
+            </article>
+
+            <article className="aboutBlock reveal reveal-right" data-reveal>
+              <h3>{t.about.dailyTitle}</h3>
+              <p>{t.about.daily}</p>
+            </article>
           </div>
         </div>
       </section>
