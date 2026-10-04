@@ -188,7 +188,7 @@ const trajectory = {
         period: "2025 — atual",
         role: "Founder & Tech Lead",
         company: "KLASSE",
-        detail: "Liderança técnica e desenvolvimento full stack de um SaaS escolar multi-tenant, cobrindo arquitetura, autenticação e RLS, dados, APIs, IA, jobs assíncronos, segurança, deploy e operação em produção.",
+        detail: "Liderança técnica e desenvolvimento de um SaaS escolar multi-tenant, da arquitetura e dados ao deploy em produção.",
       },
       {
         period: "2026 — atual",
@@ -233,7 +233,7 @@ const trajectory = {
         period: "2025 — present",
         role: "Founder & Tech Lead",
         company: "KLASSE",
-        detail: "Technical leadership and full-stack development of a multi-tenant school SaaS, covering architecture, authentication and RLS, data, APIs, AI, asynchronous jobs, security, deployment and production operations.",
+        detail: "Technical leadership and development of a multi-tenant school SaaS, from architecture and data to production deployment.",
       },
       {
         period: "2026 — present",
