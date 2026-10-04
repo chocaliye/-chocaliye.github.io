@@ -211,7 +211,7 @@ const trajectory = {
     ],
     education: [
       {
-        period: "Em andamento",
+        period: "",
         course: "Tecnologia em Redes de Computadores",
         school: "UNASP",
       },
@@ -256,7 +256,7 @@ const trajectory = {
     ],
     education: [
       {
-        period: "In progress",
+        period: "",
         course: "Technology Degree in Computer Networks",
         school: "UNASP",
       },
@@ -640,7 +640,7 @@ export default function Home() {
               <div className="educationList">
                 {trajectory[locale].education.map(item => (
                   <article className="educationItem reveal reveal-up" data-reveal key={`${item.course}-${item.school}`}>
-                    <p className="educationPeriod">{item.period}</p>
+                    {item.period && <p className="educationPeriod">{item.period}</p>}
                     <h4>{item.course}</h4>
                     <p>{item.school}</p>
                   </article>
