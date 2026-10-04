@@ -9,7 +9,7 @@ type Locale = "pt" | "en";
 
 const copy = {
   pt: {
-    nav: { work: "Projetos", expertise: "Meu arsenal", about: "Sobre", contact: "Contato" },
+    nav: { work: "Projetos", trajectory: "Trajetória", expertise: "Meu arsenal", about: "Sobre", contact: "Contato" },
     hero: {
       eyebrow: "ENGENHARIA DE SOFTWARE",
       title: "David Chocaliye",
@@ -38,6 +38,13 @@ const copy = {
       title: "As ferramentas que levo da ideia à produção.",
       lead: "Tecnologias que uso no trabalho real — produto, dados, automação e infraestrutura.",
     },
+    trajectory: {
+      eyebrow: "TRAJETÓRIA",
+      title: "Experiência que sustenta o produto.",
+      lead: "Minha carreira começou em infraestrutura e operação. Hoje essa base entra no desenvolvimento como vantagem: penso em identidade, redes, automação, segurança e produção junto com o código.",
+      experienceTitle: "EXPERIÊNCIA PROFISSIONAL",
+      educationTitle: "FORMAÇÃO",
+    },
     about: {
       eyebrow: "Sobre",
       title: "Um pouco sobre mim",
@@ -62,7 +69,7 @@ const copy = {
     footer: "Full Stack · Product Engineering · IA",
   },
   en: {
-    nav: { work: "Work", expertise: "My toolkit", about: "About", contact: "Contact" },
+    nav: { work: "Work", trajectory: "Journey", expertise: "My toolkit", about: "About", contact: "Contact" },
     hero: {
       eyebrow: "SOFTWARE ENGINEERING",
       title: "David Chocaliye",
@@ -90,6 +97,13 @@ const copy = {
       eyebrow: "MY TOOLKIT",
       title: "The tools I take from idea to production.",
       lead: "Technologies I use in real work — product, data, automation and infrastructure.",
+    },
+    trajectory: {
+      eyebrow: "JOURNEY",
+      title: "Experience behind the product work.",
+      lead: "My career started in infrastructure and operations. Today that foundation strengthens how I build software: identity, networking, automation, security and production are considered alongside the code.",
+      experienceTitle: "PROFESSIONAL EXPERIENCE",
+      educationTitle: "EDUCATION",
     },
     about: {
       eyebrow: "About",
@@ -167,6 +181,99 @@ const projects = {
   ],
 } as const;
 
+const trajectory = {
+  pt: {
+    experience: [
+      {
+        period: "2024 — atual",
+        role: "Analista de Suporte de TI N2",
+        company: "Bracell & Averis Américas",
+        detail: "Automação e operação de ambientes corporativos com Microsoft 365, Entra ID, Exchange Online e PowerShell, além de troubleshooting e padronização de rotinas.",
+      },
+      {
+        period: "jan — jun 2024",
+        role: "Analista de Suporte Técnico N1",
+        company: "GSB Solutions",
+        detail: "Atuação com sistemas corporativos, SAP, SQL, Microsoft 365, VPN, redes, servidores e implantação de sistemas.",
+      },
+      {
+        period: "jul 2023 — jan 2024",
+        role: "Administrador de Rede",
+        company: "3AM IT Services · Claro",
+        detail: "Operação de conectividade com SD-WAN VeloCloud, MPLS, TCP/IP, LAN/WAN, Active Directory, Windows e SQL Server.",
+      },
+      {
+        period: "2020 — 2022",
+        role: "Suporte de TI",
+        company: "Guiché Único da Empresa · PREI",
+        detail: "Base profissional em sistemas, Active Directory, DNS, SQL Server, Windows, macOS, hardware e atendimento técnico.",
+      },
+    ],
+    education: [
+      {
+        period: "Em andamento",
+        course: "Tecnologia em Redes de Computadores",
+        school: "UNASP",
+      },
+      {
+        period: "Concluída em 2023",
+        course: "Engenharia Informática",
+        school: "Universidade Metodista de Angola",
+      },
+      {
+        period: "2016 — 2018",
+        course: "Técnico de Informática",
+        school: "Ensino médio técnico",
+      },
+    ],
+  },
+  en: {
+    experience: [
+      {
+        period: "2024 — present",
+        role: "IT Support Analyst L2",
+        company: "Bracell & Averis Americas",
+        detail: "Automation and operation of corporate environments with Microsoft 365, Entra ID, Exchange Online and PowerShell, plus troubleshooting and operational standardization.",
+      },
+      {
+        period: "Jan — Jun 2024",
+        role: "Technical Support Analyst L1",
+        company: "GSB Solutions",
+        detail: "Worked across corporate systems, SAP, SQL, Microsoft 365, VPN, networks, servers and system deployment.",
+      },
+      {
+        period: "Jul 2023 — Jan 2024",
+        role: "Network Administrator",
+        company: "3AM IT Services · Claro",
+        detail: "Connectivity operations with SD-WAN VeloCloud, MPLS, TCP/IP, LAN/WAN, Active Directory, Windows and SQL Server.",
+      },
+      {
+        period: "2020 — 2022",
+        role: "IT Support",
+        company: "Guiché Único da Empresa · PREI",
+        detail: "Early professional foundation in systems, Active Directory, DNS, SQL Server, Windows, macOS, hardware and technical support.",
+      },
+    ],
+    education: [
+      {
+        period: "In progress",
+        course: "Technology Degree in Computer Networks",
+        school: "UNASP",
+      },
+      {
+        period: "Completed in 2023",
+        course: "Computer Engineering",
+        school: "Universidade Metodista de Angola",
+      },
+      {
+        period: "2016 — 2018",
+        course: "Technical Diploma in Information Technology",
+        school: "Technical High School",
+      },
+    ],
+  },
+} as const;
+
 const skills = {
   pt: [
     {
@@ -219,9 +326,10 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const t = copy[locale];
   const scrollSections = [
-    { id: "work", label: t.nav.work },
-    { id: "expertise", label: t.nav.expertise },
     { id: "about", label: t.nav.about },
+    { id: "work", label: t.nav.work },
+    { id: "trajectory", label: t.nav.trajectory },
+    { id: "expertise", label: t.nav.expertise },
     { id: "contact", label: t.nav.contact },
   ] as const;
 
@@ -288,9 +396,10 @@ export default function Home() {
 
         <div className="topbarRight">
           <nav className="navlinks">
-            <a href="#work"><WeightShiftText>{t.nav.work}</WeightShiftText></a>
-            <a href="#expertise"><WeightShiftText>{t.nav.expertise}</WeightShiftText></a>
             <a href="#about"><WeightShiftText>{t.nav.about}</WeightShiftText></a>
+            <a href="#work"><WeightShiftText>{t.nav.work}</WeightShiftText></a>
+            <a href="#trajectory"><WeightShiftText>{t.nav.trajectory}</WeightShiftText></a>
+            <a href="#expertise"><WeightShiftText>{t.nav.expertise}</WeightShiftText></a>
             <a href="#contact"><WeightShiftText>{t.nav.contact}</WeightShiftText></a>
           </nav>
 
@@ -329,9 +438,10 @@ export default function Home() {
 
       <div className={`mobileMenu ${menuOpen ? "is-open" : ""}`} aria-hidden={!menuOpen}>
         <nav>
-          <a href="#work" onClick={() => setMenuOpen(false)}>{t.nav.work}</a>
-          <a href="#expertise" onClick={() => setMenuOpen(false)}>{t.nav.expertise}</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>{t.nav.about}</a>
+          <a href="#work" onClick={() => setMenuOpen(false)}>{t.nav.work}</a>
+          <a href="#trajectory" onClick={() => setMenuOpen(false)}>{t.nav.trajectory}</a>
+          <a href="#expertise" onClick={() => setMenuOpen(false)}>{t.nav.expertise}</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>{t.nav.contact}</a>
         </nav>
       </div>
@@ -496,6 +606,49 @@ export default function Home() {
             </div>
           </article>
         ))}
+      </section>
+
+      <section id="trajectory" className="trajectorySection">
+        <div className="shell">
+          <header className="trajectoryLead reveal reveal-up" data-reveal>
+            <p className="eyebrow">{t.trajectory.eyebrow}</p>
+            <div className="trajectoryLeadGrid">
+              <h2 data-scroll-title>{t.trajectory.title}</h2>
+              <p>{t.trajectory.lead}</p>
+            </div>
+          </header>
+
+          <div className="trajectoryColumns">
+            <div className="trajectoryColumn">
+              <h3>{t.trajectory.experienceTitle}</h3>
+              <div className="timelineList">
+                {trajectory[locale].experience.map(item => (
+                  <article className="timelineItem reveal reveal-up" data-reveal key={`${item.period}-${item.company}`}>
+                    <p className="timelinePeriod">{item.period}</p>
+                    <div className="timelineBody">
+                      <h4>{item.role}</h4>
+                      <p className="timelineCompany">{item.company}</p>
+                      <p className="timelineDetail">{item.detail}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="trajectoryColumn trajectoryEducation">
+              <h3>{t.trajectory.educationTitle}</h3>
+              <div className="educationList">
+                {trajectory[locale].education.map(item => (
+                  <article className="educationItem reveal reveal-up" data-reveal key={`${item.course}-${item.school}`}>
+                    <p className="educationPeriod">{item.period}</p>
+                    <h4>{item.course}</h4>
+                    <p>{item.school}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="manifesto shell reveal reveal-up" data-reveal>
