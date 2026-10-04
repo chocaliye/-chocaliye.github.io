@@ -185,28 +185,28 @@ const trajectory = {
   pt: {
     experience: [
       {
+        period: "2025 — atual",
+        role: "Founder & Tech Lead",
+        company: "KLASSE",
+        detail: "Liderança técnica e desenvolvimento full stack de um SaaS escolar multi-tenant, cobrindo arquitetura, autenticação e RLS, dados, APIs, IA, jobs assíncronos, segurança, deploy e operação em produção.",
+      },
+      {
+        period: "2026 — atual",
+        role: "Founder & Technical Lead",
+        company: "FEXA",
+        detail: "Arquitetura e desenvolvimento de produto de automação comercial com IA para WhatsApp, com CRM, agentes conversacionais, integrações via APIs, handoff humano e operação multiempresa.",
+      },
+      {
         period: "2024 — atual",
         role: "Analista de Suporte de TI N2",
         company: "Bracell & Averis Américas",
         detail: "Automação e operação de ambientes corporativos com Microsoft 365, Entra ID, Exchange Online e PowerShell, além de troubleshooting e padronização de rotinas.",
       },
       {
-        period: "jan — jun 2024",
-        role: "Analista de Suporte Técnico N1",
-        company: "GSB Solutions",
-        detail: "Atuação com sistemas corporativos, SAP, SQL, Microsoft 365, VPN, redes, servidores e implantação de sistemas.",
-      },
-      {
         period: "jul 2023 — jan 2024",
         role: "Administrador de Rede",
         company: "3AM IT Services · Claro",
         detail: "Operação de conectividade com SD-WAN VeloCloud, MPLS, TCP/IP, LAN/WAN, Active Directory, Windows e SQL Server.",
-      },
-      {
-        period: "2020 — 2022",
-        role: "Suporte de TI",
-        company: "Guiché Único da Empresa · PREI",
-        detail: "Base profissional em sistemas, Active Directory, DNS, SQL Server, Windows, macOS, hardware e atendimento técnico.",
       },
     ],
     education: [
@@ -230,28 +230,28 @@ const trajectory = {
   en: {
     experience: [
       {
+        period: "2025 — present",
+        role: "Founder & Tech Lead",
+        company: "KLASSE",
+        detail: "Technical leadership and full-stack development of a multi-tenant school SaaS, covering architecture, authentication and RLS, data, APIs, AI, asynchronous jobs, security, deployment and production operations.",
+      },
+      {
+        period: "2026 — present",
+        role: "Founder & Technical Lead",
+        company: "FEXA",
+        detail: "Architecture and development of an AI-powered commercial automation product for WhatsApp, including CRM, conversational agents, API integrations, human handoff and multi-company operations.",
+      },
+      {
         period: "2024 — present",
         role: "IT Support Analyst L2",
         company: "Bracell & Averis Americas",
         detail: "Automation and operation of corporate environments with Microsoft 365, Entra ID, Exchange Online and PowerShell, plus troubleshooting and operational standardization.",
       },
       {
-        period: "Jan — Jun 2024",
-        role: "Technical Support Analyst L1",
-        company: "GSB Solutions",
-        detail: "Worked across corporate systems, SAP, SQL, Microsoft 365, VPN, networks, servers and system deployment.",
-      },
-      {
         period: "Jul 2023 — Jan 2024",
         role: "Network Administrator",
         company: "3AM IT Services · Claro",
         detail: "Connectivity operations with SD-WAN VeloCloud, MPLS, TCP/IP, LAN/WAN, Active Directory, Windows and SQL Server.",
-      },
-      {
-        period: "2020 — 2022",
-        role: "IT Support",
-        company: "Guiché Único da Empresa · PREI",
-        detail: "Early professional foundation in systems, Active Directory, DNS, SQL Server, Windows, macOS, hardware and technical support.",
       },
     ],
     education: [
