@@ -324,6 +324,12 @@ export default function Home() {
 
       <section className="hero">
         <div className="heroBackdrop" aria-hidden="true" />
+        <img
+          className="heroPortrait"
+          src="/david-hero-chair.webp"
+          alt=""
+          aria-hidden="true"
+        />
 
         <div className="shell heroInner">
           <div className="heroStatement">
