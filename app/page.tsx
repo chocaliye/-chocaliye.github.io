@@ -362,12 +362,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="manifesto shell reveal reveal-up" data-reveal>
-        <p className="manifestoIndex">00</p>
-        <p className="manifestoText">
-          {t.manifesto.first}
-          <span>{t.manifesto.second}</span>
-        </p>
+      <section id="about" className="aboutEditorial">
+        <div className="shell aboutGrid">
+          <div className="aboutSticky reveal reveal-left" data-reveal>
+            <p className="eyebrow">{t.about.eyebrow}</p>
+            <h2 data-scroll-title>{t.about.title}</h2>
+          </div>
+
+          <div className="aboutFlow reveal reveal-right" data-reveal>
+            <p className="aboutBig">{t.about.big}</p>
+            <p>{t.about.p1}</p>
+            <p>{t.about.p2}</p>
+          </div>
+        </div>
       </section>
 
       <section id="work" className="work">
@@ -441,6 +448,14 @@ export default function Home() {
         ))}
       </section>
 
+      <section className="manifesto shell reveal reveal-up" data-reveal>
+        <p className="manifestoIndex">00</p>
+        <p className="manifestoText">
+          {t.manifesto.first}
+          <span>{t.manifesto.second}</span>
+        </p>
+      </section>
+
       <section className="statementBand" aria-label="Engineering principles">
         <div className="statementViewport">
           <div className="statementTrack">
@@ -487,21 +502,6 @@ export default function Home() {
                 </div>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="aboutEditorial">
-        <div className="shell aboutGrid">
-          <div className="aboutSticky reveal reveal-left" data-reveal>
-            <p className="eyebrow">{t.about.eyebrow}</p>
-            <h2 data-scroll-title>{t.about.title}</h2>
-          </div>
-
-          <div className="aboutFlow reveal reveal-right" data-reveal>
-            <p className="aboutBig">{t.about.big}</p>
-            <p>{t.about.p1}</p>
-            <p>{t.about.p2}</p>
           </div>
         </div>
       </section>
